@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adu Puli Attam - Shaurya Srivastava - BT17GCS100</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function resize(){
+            $('svg').attr('height', window.innerHeight)
+        }
+        
+        function load(){
+            $('svg').attr('height', window.innerHeight)
+            l = ['#goat1' , '#goat2', '#goat3' , '#goat4', '#goat5' , '#goat6', '#goat7' , '#goat8',
+            '#goat9' , '#goat10', '#goat11' , '#goat12', '#goat13' , '#goat14', '#goat15']
+
+            for (var gid in l){
+                console.log(l[gid])
+                $(l[gid]).hide();
+            }
+            $('img').attr('src','images/tiger.jpg')
+            $('h5').hide();
+        }
+
+        function toggledark(){
+            $("button").toggleClass("btn btn-dark btn-lg")
+        }
+
+        function play(){
+            $("#instruction_page").remove();
+        }
+    </script>
+    <script src="main.js"></script>
+</head>
+<body onresize="resize()" onload="load()">
+
+    <div id="instruction_page" class="ip">
+        <div class="paper">
+            <h1>Adu Puli Attam</h1>
+            <button type="button" class="btn btn-light btn-lg" onmouseover="toggledark()" onmouseout="toggledark()" style="margin: 2%;" onclick="play()">Play</button>
+            <p>Instructions - <br/>
+            Player 1 is Tiger, Player 2 is Goat<br/>
+            Click on the Tiger, Then Click on the Red Circle to Move Tiger<br/>
+            Click on the Yellow Dot to place Goat<br/>
+            Goats are only allowed to Move once all 15 Goats have been Placed<br/>
+            Click on the Goat, Then Click on the Red Circle to Move Goat<br/>
+            </p>
+            <div class="images">
+                <div class="dot" style="background-color: yellow;"></div>
+                <div class="dot" style="background-color: red;"></div>
+            </div>
+        </div>
+    </div>
+
+    <h4>Player 1</h4>
+    <img src="images/goat.png" alt="" srcset="">
+    <h5>x15</h5>
+    <svg width="100%">
+
+        <line x1="50%" y1="10%" x2="20%" y2="90%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+        <line x1="50%" y1="10%" x2="35%" y2="90%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+        <line x1="50%" y1="10%" x2="65%" y2="90%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+        <line x1="50%" y1="10%" x2="80%" y2="90%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+
+        <line x1="26.5%" y1="35%" x2="73.5%" y2="35%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+        <line x1="19.3%" y1="50%" x2="80.9%" y2="50%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+        <line x1="11.9%" y1="65%" x2="88.2%" y2="65%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+
+        <line x1="20%" y1="90%" x2="80%" y2="90%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+
+        <line x1="26.5%" y1="35%" x2="12%" y2="65%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+        <line x1="73.5%" y1="35%" x2="88.1%" y2="65%" style="stroke:rgb(255, 255, 255);stroke-width:4px" />
+
+        <circle cx="50%" cy="10%" r="0.8%" fill="white" id="node1"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        
+        <circle cx="26.5%" cy="35%" r="0.8%" fill="white" id="node2"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="40.5%" cy="35%" r="0.8%" fill="white" id="node3"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="45.3%" cy="35%" r="0.8%" fill="white" id="node4"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="54.7%" cy="35%" r="0.8%" fill="white" id="node5"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="59.5%" cy="35%" r="0.8%" fill="white" id="node6"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="73.6%" cy="35%" r="0.8%" fill="white" id="node7"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+
+        <circle cx="19.3%" cy="50%" r="0.8%" fill="white" id="node8"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="35%" cy="50%" r="0.8%" fill="white" id="node9"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="42.5%" cy="50%" r="0.8%" fill="white" id="node10"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="57.5%" cy="50%" r="0.8%" fill="white" id="node11"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="65%" cy="50%" r="0.8%" fill="white" id="node12"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="80.9%" cy="50%" r="0.8%" fill="white" id="node13"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+
+        <circle cx="11.9%" cy="65%" r="0.8%" fill="white" id="node14"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="29.5%" cy="65%" r="0.8%" fill="white" id="node15"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="39.7%" cy="65%" r="0.8%" fill="white" id="node16"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="60.3%" cy="65%" r="0.8%" fill="white" id="node17"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="70.5%" cy="65%" r="0.8%" fill="white" id="node18"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="88.2%" cy="65%" r="0.8%" fill="white" id="node19"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>++
+
+        <circle cx="20%" cy="90%" r="0.8%" fill="white" id="node20"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="35%" cy="90%" r="0.8%" fill="white" id="node21"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="65%" cy="90%" r="0.8%" fill="white" id="node22"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+        <circle cx="80%" cy="90%" r="0.8%" fill="white" id="node23"  onmouseover="evt.target.setAttribute('r', '1.2%');" onmouseout="evt.target.setAttribute('r', '0.8%');"/>
+
+        <image href="images/tiger.jpg" id="tiger1" x="47%" y="7%" height="6%" width="6%" onclick="change_color(this.id)" onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/tiger.jpg" id="tiger2" x="42.3%" y="32%" height="6%" width="6%" onclick="change_color(this.id)" onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/tiger.jpg" id="tiger3" x="51.7%" y="32%" height="6%" width="6%" onclick="change_color(this.id)" onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+
+        <image href="images/goat.png" id="goat1" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat2" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat3" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat4" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat5" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat6" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat7" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat8" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat9" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat10" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat11" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat12" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat13" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat14" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        <image href="images/goat.png" id="goat15" x="90%" y="90%" height="6%" width="6%"  onmouseover="evt.target.setAttribute('height', '6.5%'); evt.target.setAttribute('width', '6.5%');" onmouseout="evt.target.setAttribute('height', '6%'); evt.target.setAttribute('width', '6%');"/>
+        
+    </svg>
+
+</body>
+</html>
